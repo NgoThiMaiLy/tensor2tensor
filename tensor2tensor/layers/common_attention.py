@@ -949,7 +949,7 @@ def attention_bias_ignore_padding(memory_padding):
 
 
 @expert_utils.add_name_scope()
-def attention_bias_to_padding(attention_bias, cast_fn=tf.to_float):
+def attention_bias_to_padding(attention_bias, cast_fn=tf.cast(tf.float32)):
   """Inverse of attention_bias_ignore_padding().
 
   Args:
